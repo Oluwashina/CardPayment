@@ -45,7 +45,7 @@
                     <!-- Company Name -->
                     <div class="flex mt-5">
                         <p>Bank name</p>
-                        <p>Astrapolaris MFB</p>
+                        <p class="appName">Astrapolaris MFB</p>
                     </div>
                     <hr>
 
@@ -118,9 +118,13 @@
             var email = data.email
             var phoneNumber = data.phoneNumber
             var transRef = data.transRef
+            var appName = data.appName
             
             // set amount
             $('.amount').text(`NGN ${amount}`)
+
+            // set app Name
+            $('.appName').text(appName)
 
             // Pass values to interswicth button
             QTCheckout.paymentItems  =  QTCheckout.paymentItems  ||  [];
